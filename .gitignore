@@ -1,0 +1,62 @@
+# ==================== Python 通用忽略规则 ====================
+# 虚拟环境文件夹（ .venv，这几个是常见的虚拟环境命名）
+.venv/
+venv/
+env/
+ENV/
+env.local/
+env.development/
+
+# Python 编译生成的字节码文件（__pycache__ 文件夹和 .pyc 等文件）
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pyc.old
+
+# Python 运行时生成的缓存、日志、临时文件
+*.log
+*.tmp
+*.temp
+*.swp
+.DS_Store  # Mac 系统自带的隐藏文件，Windows 不用管这个，不影响
+
+# 环境变量文件（ .env里面可能有敏感配置）
+.env
+.env.*
+!.env.example  # 如果你有示例环境变量文件，可以保留，前面加 ! 表示不忽略
+
+
+# 本地向量数据库文件夹（ chroma_db，）
+chroma_db/
+
+# 本地数据文件夹（项目里的 data_close、chat_history 等）
+data_close/
+chat_history/
+data/
+raw_data/
+
+# 模型相关文件
+models/
+*.bin
+*.ckpt
+*.pth
+*.safetensors
+
+# 输出文件
+output/
+exports/
+reports/
+*.pdf
+*.xlsx
+*.docx
+
+# ==================== 其他可选忽略（根据需要保留） ====================
+# IDE 配置文件（如果你不想上传 PyCharm 的配置，可以保留下面这部分）
+.idea/
+.vscode/
+*.iml
+*.idea/workspace.xml
+*.idea/tasks.xml
